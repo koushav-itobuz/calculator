@@ -16,35 +16,38 @@ buttons.forEach((button) => {
 });
 
 
-function check(entry) {
-  if ((entry >= '0' && entry <= '9') || entry === '.') {
+function check(digit) {
+  if ((digit >= '0' && digit <= '9') || digit === '.') {
 
-    if (entry === '.') {
+    if (digit === '.') {
       if (counter === 0){
         counter++;
-        screen.innerHTML += entry;
+        screen.innerHTML += digit;
       }
     }
 
     else {
-    screen.innerHTML += entry;
+    screen.innerHTML += digit;
     }
   }
 
-  else if (entry === '+' || entry === '-' || entry === '*' || entry === '/' || entry === '%' || entry === '+/-') {
-    operators = entry;
-    calculator(entry);
+  else if (digit === '+' || digit === '-' || digit === '*' || digit === '/' || digit === '%' || digit === '+/-') {
+    operators = digit;
+    calculator(digit);
   }
 
-  else if (entry === '=') {
+  else if (digit === '=') {
     calculator(operators);
     screen.innerHTML = result;
     output = screen.innerHTML;
     result = 0;
     res = 1;
+    if (screen.innerHTML.includes(".")) {
+      counter++;
+    }
   }
 
-  else if (entry === "Clear") {
+  else if (digit === "Clear") {
     screen.innerHTML = "";
   }
 
@@ -117,6 +120,7 @@ function calculator(operator) {
 
       operand = - (operand);
       screen.innerHTML = operand;
+      result = operand;
 
       break;
 

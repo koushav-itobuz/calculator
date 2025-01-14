@@ -5,6 +5,10 @@ body {
   height: 100vh;
 }
 
+button {
+  font-size: larger;
+}
+
 button:hover {
   cursor: pointer;
 }
@@ -24,12 +28,15 @@ button:hover {
   background-color: gainsboro;
   border-radius: 6px;
   border: 1px solid black;
+  text-align: end;
+  padding: 20px;
+  font-size: larger;
 }
 
 .function-box {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px 20px;
+  grid-gap: 5px 5px;
 }
 
 #clear {
@@ -41,5 +48,5 @@ button:hover {
 }
 
 #equals {
-  background-color: #F96F3E;
+  background-color: #F1E295;
 }/*# sourceMappingURL=style.css.map */

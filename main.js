@@ -49,7 +49,7 @@ function check(entry) {
   }
 
   else {
-    if (screen.innerHTML === "NaN" || screen.innerHTML === "undefined" || screen.innerHTML === "Infinity") {
+    if (screen.innerHTML === "NaN" || screen.innerHTML === "undefined" || screen.innerHTML === "Infinity" || screen.innerHTML === "-Infinity") {
       screen.innerHTML = "";
     }
 
